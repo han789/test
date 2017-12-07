@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <input class="form-control" id="inputEmail3" placeholder="请输入账号" v-model="account">
-    <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码" v-model="password">
-    <button type="submit" class="btn btn-default" @click="login">登录</button>
+      <div>
+        <el-input class="form-control" id="inputEmail3" placeholder="请输入账号" v-model="account">
+          <template slot="prepend">用户名:</template>
+        </el-input>
+      </div>
+      <div>
+        <el-input class="form-control" id="inputPassword3" type="password" placeholder="请输入密码" v-model="password">
+          <template slot="prepend">用户名:</template>
+        </el-input>
+      </div>
+      <div style="margin: 20px 0">
+        <el-button type="primary" plain class="btn btn-default" @click="login">登录</el-button>
+      </div>
   </div>
 </template>
 
 <script>
+
+
 
 export default {
   data () {
